@@ -7,7 +7,7 @@ def lambda_handler(event, context):
 
     print("Received event: " + str(event))
 
-    print(dynamodb.scan(TableName=table_name))
+    # print(dynamodb.scan(TableName=table_name))
 
     return {
         "statusCode": 200,
