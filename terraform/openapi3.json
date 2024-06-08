@@ -1,0 +1,20 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "example",
+        "version": "1.0"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "x-amazon-apigateway-integration": {
+                    "httpMethod": "GET",
+                    "payloadFormatVersion": "2.0",
+                    "type": "HTTP_PROXY",
+                    "uri": "${lambda_invoke_arn}",
+                    "connectionType" : "INTERNET"
+                }
+            }
+        }
+    }
+}
